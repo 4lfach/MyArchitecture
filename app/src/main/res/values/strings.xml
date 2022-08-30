@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyArchitecture</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="change_color">Change Color</string>
+    <string name="selected">selected</string>
 </resources>
