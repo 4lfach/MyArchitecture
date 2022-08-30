@@ -21,7 +21,7 @@ class ColorsAdapter(
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 		val inflater = LayoutInflater.from(parent.context)
-		val binding = ItemColorBinding.inflate(inflater)
+		val binding = ItemColorBinding.inflate(inflater, parent, false)
 
 		binding.root.setOnClickListener(this)
 		return ViewHolder(binding)

@@ -4,4 +4,5 @@
     <string name="cancel_button">Cancel</string>
     <string name="change_color">Change Color</string>
     <string name="selected">selected</string>
+    <string name="change_color_screen_title">Change color</string>
 </resources>
