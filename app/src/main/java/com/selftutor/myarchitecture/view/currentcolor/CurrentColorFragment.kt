@@ -9,9 +9,10 @@ import com.selftutor.myarchitecture.databinding.FragmentCurrentColorBinding
 import com.selftutor.myarchitecture.view.base.BaseFragment
 import com.selftutor.myarchitecture.view.base.BaseScreen
 import com.selftutor.myarchitecture.view.base.BaseViewModel
+import com.selftutor.myarchitecture.view.base.screenViewModel
 
 class CurrentColorFragment: BaseFragment() {
-	override val viewModel by viewModels<CurrentColorViewModel>()
+	override val viewModel by screenViewModel<CurrentColorViewModel>()
 
 	override fun onCreateView(
 		inflater: LayoutInflater,
@@ -20,6 +21,13 @@ class CurrentColorFragment: BaseFragment() {
 	): View? {
 		val binding = FragmentCurrentColorBinding.inflate(inflater, container, false)
 
+		viewModel.currentColor.observe(viewLifecycleOwner){
+			binding.colorView.setBackgroundColor(it.value)
+		}
+
+		binding.btnChangeColor.setOnClickListener {
+			viewModel.onChangeColor()
+		}
 		return binding.root
 	}
 

@@ -17,6 +17,7 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <View
+            android:id="@+id/colorView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:background="#0088ff"/>
