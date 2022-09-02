@@ -1,4 +1,4 @@
-package com.selftutor.myarchitecture.view.base
+package com.selftutor.foundation.view
 
 import androidx.fragment.app.Fragment
 import com.selftutor.myarchitecture.MainActivity
@@ -17,6 +17,6 @@ abstract class BaseFragment: Fragment() {
 	 */
 	fun notifyScreenUpdates(){
 		//If there are 2 or more activities then interfaces should be used
-		(requireActivity() as MainActivity).notifyScreenUpdates()
+		(requireActivity() as FragmentsHolder).notifyScreenUpdates()
 	}
 }

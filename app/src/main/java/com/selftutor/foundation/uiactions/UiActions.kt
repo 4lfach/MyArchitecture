@@ -1,4 +1,4 @@
-package com.selftutor.myarchitecture.view
+package com.selftutor.foundation.uiactions
 
 interface UiActions {
 

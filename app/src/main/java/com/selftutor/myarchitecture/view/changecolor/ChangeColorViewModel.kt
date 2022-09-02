@@ -7,9 +7,9 @@ import androidx.lifecycle.SavedStateHandle
 import com.selftutor.myarchitecture.R
 import com.selftutor.myarchitecture.model.colors.ColorsRepository
 import com.selftutor.myarchitecture.model.colors.NamedColor
-import com.selftutor.myarchitecture.view.Navigator
-import com.selftutor.myarchitecture.view.UiActions
-import com.selftutor.myarchitecture.view.base.BaseViewModel
+import com.selftutor.foundation.navigator.Navigator
+import com.selftutor.foundation.uiactions.UiActions
+import com.selftutor.foundation.view.BaseViewModel
 
 private const val CURRENT_COLOR_ID = "currentColorID"
 
@@ -67,7 +67,7 @@ class ChangeColorViewModel(
 		val colors = _availableColors.value ?: return
 		val currentColorId = _currentColorId.value ?: return
 		val currentColor = colors.first { it.id == currentColorId }
-		_colorsList.value = colors.map { NamedColorListItem(currentColor, currentColorId == it.id) }
+		_colorsList.value = colors.map { NamedColorListItem(it, currentColorId == it.id) }
 		_screenTitle.value = uiActions.getString(R.string.change_color_screen_title, currentColor.name)
 	}
 }

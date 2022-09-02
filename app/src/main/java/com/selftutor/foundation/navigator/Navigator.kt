@@ -1,6 +1,6 @@
-package com.selftutor.myarchitecture.view
+package com.selftutor.foundation.navigator
 
-import com.selftutor.myarchitecture.view.base.BaseScreen
+import com.selftutor.foundation.view.BaseScreen
 
 /**
  * Interface for navigation

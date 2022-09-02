@@ -1,9 +1,9 @@
-package com.selftutor.myarchitecture.view.base
+package com.selftutor.foundation.view
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.selftutor.myarchitecture.utils.Event
+import com.selftutor.foundation.utils.Event
 
 typealias LiveEvent<T> = LiveData<Event<T>>
 typealias MutableLiveEvent<T> = MutableLiveData<Event<T>>

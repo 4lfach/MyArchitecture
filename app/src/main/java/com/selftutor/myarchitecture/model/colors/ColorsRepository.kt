@@ -1,6 +1,6 @@
 package com.selftutor.myarchitecture.model.colors
 
-import com.selftutor.myarchitecture.model.Repository
+import com.selftutor.foundation.model.Repository
 
 typealias ColorListener = (NamedColor) -> Unit
 

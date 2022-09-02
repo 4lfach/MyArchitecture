@@ -1,4 +1,4 @@
-package com.selftutor.myarchitecture.utils
+package com.selftutor.foundation.utils
 
 /**
  * Represents "side effect".

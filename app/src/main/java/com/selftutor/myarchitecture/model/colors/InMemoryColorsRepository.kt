@@ -2,14 +2,16 @@ package com.selftutor.myarchitecture.model.colors
 
 import android.graphics.Color
 
-class InMemoryColorsRepository: ColorsRepository {
-
+/**
+ * Simple in-memory implementation of [ColorsRepository]
+ */
+class InMemoryColorsRepository : ColorsRepository {
 
 	override var currentColor: NamedColor = AVAILABLE_COLORS[0]
 		set(value) {
-			if(field!=value){
+			if (field != value) {
 				field = value
-				listeners.forEach { it.invoke(value) }
+				listeners.forEach { it(value) }
 			}
 		}
 
@@ -17,9 +19,6 @@ class InMemoryColorsRepository: ColorsRepository {
 
 	override fun getAvailableColors(): List<NamedColor> = AVAILABLE_COLORS
 
-	override fun getById(id: Long): NamedColor {
-		return AVAILABLE_COLORS.first { it.id == id }
-	}
 	override fun addListener(listener: ColorListener) {
 		listeners += listener
 		listener(currentColor)
@@ -29,7 +28,11 @@ class InMemoryColorsRepository: ColorsRepository {
 		listeners -= listener
 	}
 
-	companion object{
+	override fun getById(id: Long): NamedColor {
+		return AVAILABLE_COLORS.first { it.id == id }
+	}
+
+	companion object {
 		private val AVAILABLE_COLORS = listOf(
 			NamedColor(1, "Red", Color.RED),
 			NamedColor(2, "Green", Color.GREEN),
@@ -48,5 +51,4 @@ class InMemoryColorsRepository: ColorsRepository {
 			NamedColor(15, "Violet", Color.rgb(148, 0, 211)),
 		)
 	}
-
 }

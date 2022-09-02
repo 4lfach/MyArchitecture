@@ -8,10 +8,10 @@ import android.view.ViewTreeObserver
 import androidx.recyclerview.widget.GridLayoutManager
 import com.selftutor.myarchitecture.R
 import com.selftutor.myarchitecture.databinding.FragmentChangeColorBinding
-import com.selftutor.myarchitecture.view.HasScreenTitle
-import com.selftutor.myarchitecture.view.base.BaseFragment
-import com.selftutor.myarchitecture.view.base.BaseScreen
-import com.selftutor.myarchitecture.view.base.screenViewModel
+import com.selftutor.foundation.view.HasScreenTitle
+import com.selftutor.foundation.view.BaseFragment
+import com.selftutor.foundation.view.BaseScreen
+import com.selftutor.foundation.view.screenViewModel
 
 class ChangeColorFragment : BaseFragment(), HasScreenTitle {
 
@@ -42,15 +42,13 @@ class ChangeColorFragment : BaseFragment(), HasScreenTitle {
 	}
 
 	private fun setupLayoutManager(binding: FragmentChangeColorBinding, adapter: ColorsAdapter) {
-		binding.rvColors.viewTreeObserver.addOnGlobalLayoutListener(object :
-			ViewTreeObserver.OnGlobalLayoutListener {
+		// waiting for list width
+		binding.rvColors.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
 			override fun onGlobalLayout() {
 				binding.rvColors.viewTreeObserver.removeOnGlobalLayoutListener(this)
-
 				val width = binding.rvColors.width
 				val itemWidth = resources.getDimensionPixelSize(R.dimen.item_width)
 				val columns = width / itemWidth
-
 				binding.rvColors.adapter = adapter
 				binding.rvColors.layoutManager = GridLayoutManager(requireContext(), columns)
 			}

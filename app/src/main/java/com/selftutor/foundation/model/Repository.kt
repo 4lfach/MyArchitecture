@@ -1,4 +1,4 @@
-package com.selftutor.myarchitecture.model
+package com.selftutor.foundation.model
 
 /**
  * Base interface for all repositories

@@ -1,4 +1,4 @@
-package com.selftutor.myarchitecture.view
+package com.selftutor.foundation.view
 
 /**
  * If your fragment wants to show custom screen title in the toolbar, implement this

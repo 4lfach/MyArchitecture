@@ -1,4 +1,4 @@
-package com.selftutor.myarchitecture.view.base
+package com.selftutor.foundation.view
 
 import java.io.Serializable
 

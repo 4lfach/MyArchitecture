@@ -3,13 +3,12 @@ package com.selftutor.myarchitecture.view.currentcolor
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.selftutor.myarchitecture.R
-import com.selftutor.myarchitecture.model.Repository
 import com.selftutor.myarchitecture.model.colors.ColorListener
 import com.selftutor.myarchitecture.model.colors.ColorsRepository
 import com.selftutor.myarchitecture.model.colors.NamedColor
-import com.selftutor.myarchitecture.view.Navigator
-import com.selftutor.myarchitecture.view.UiActions
-import com.selftutor.myarchitecture.view.base.BaseViewModel
+import com.selftutor.foundation.navigator.Navigator
+import com.selftutor.foundation.uiactions.UiActions
+import com.selftutor.foundation.view.BaseViewModel
 import com.selftutor.myarchitecture.view.changecolor.ChangeColorFragment
 
 class CurrentColorViewModel(
