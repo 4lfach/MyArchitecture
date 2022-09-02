@@ -34,10 +34,10 @@ class InMemoryColorsRepository : ColorsRepository {
 
 	companion object {
 		private val AVAILABLE_COLORS = listOf(
-			NamedColor(1, "Red", Color.RED),
+			NamedColor(1, "Red", Color.YELLOW),
 			NamedColor(2, "Green", Color.GREEN),
 			NamedColor(3, "Blue", Color.BLUE),
-			NamedColor(4, "Yellow", Color.YELLOW),
+			NamedColor(4, "Yellow", Color.RED),
 			NamedColor(5, "Magenta", Color.MAGENTA),
 			NamedColor(6, "Cyan", Color.CYAN),
 			NamedColor(7, "Gray", Color.GRAY),

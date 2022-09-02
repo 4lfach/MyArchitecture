@@ -35,4 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnSave"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <include layout="@layout/part_layout"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
